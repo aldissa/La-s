@@ -4,23 +4,19 @@
   --pink-3: #ff88a6;
 }
 
-/* font helpers */
 .font-dancing { font-family: 'Dancing Script', cursive; }
 .font-poppins { font-family: 'Poppins', sans-serif; }
 
-/* glow title */
 .glow-text {
   text-shadow: 0 0 12px #ff9bb8, 0 0 24px #ff6b94, 0 0 40px #ff2f78;
 }
 
-/* fade-in util */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }
 }
 .animate-fadeIn { animation: fadeIn 0.6s ease both; }
 
-/* scrapbook cards */
 .scrap-card {
   background: white;
   padding: 8px;
@@ -35,7 +31,6 @@
 .scrap-card:nth-child(even) { transform: rotate(3deg); }
 .scrap-card:hover { transform: scale(1.05) rotate(0deg); }
 
-/* petal (fallback for CSS-only petals) */
 .petal {
   position: absolute;
   width: 36px;
@@ -46,7 +41,6 @@
   will-change: transform, opacity;
 }
 
-/* heart particle */
 .heart {
   position: absolute;
   width: 24px;
