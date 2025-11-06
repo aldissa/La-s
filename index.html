@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Happy Birthday, Lala 🌷</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
@@ -14,25 +16,41 @@
 
   <nav class="fixed top-0 left-0 right-0 z-50 bg-white/60 backdrop-blur py-3 shadow-sm">
     <div class="max-w-5xl mx-auto flex items-center justify-between px-4">
-      <div class="flex items-center gap-3">
-        <img src="assets/images/tulip.png" alt="logo" class="w-10 h-10 rounded-full object-cover shadow-sm">
+      <a href="#" class="flex items-center gap-3">
+        <img src="assets/images/tulip.png" class="w-10 h-10 rounded-full object-cover shadow-sm">
         <div>
           <div class="font-dancing text-2xl text-pink-600">For Lala</div>
           <div class="text-xs text-pink-500">Happy Birthday 🌷</div>
         </div>
-      </div>
+      </a>
 
-      <ul class="flex gap-3 items-center text-sm">
+      <button id="menuToggle" class="lg:hidden w-10 h-10 flex items-center justify-center bg-pink-200 text-pink-700 rounded-full">
+        ☰
+      </button>
+
+      <ul class="hidden lg:flex gap-3 items-center text-sm">
         <li><a href="#" data-page="intro" class="nav-link px-3 py-1 rounded-md bg-pink-200 text-pink-700">Start</a></li>
         <li><a href="#" data-page="home" class="nav-link px-3 py-1 rounded-md hover:bg-pink-100">Home</a></li>
         <li><a href="#" data-page="about" class="nav-link px-3 py-1 rounded-md hover:bg-pink-100">About Lala</a></li>
         <li><a href="#" data-page="memories" class="nav-link px-3 py-1 rounded-md hover:bg-pink-100">Memories</a></li>
-        <li><a href="#" data-page="video" class="nav-link px-3 py-1 rounded-md hover:bg-pink-100">Video</a></li>
-        <li><a href="#" data-page="playlist" class="nav-link px-3 py-1 rounded-md hover:bg-pink-100">Playlist</a></li>
-        <li><a href="#" data-page="cake" class="nav-link px-3 py-1 rounded-md hover:bg-pink-100">Cake 🎂</a></li>
-        <li><a href="#" data-page="note" class="nav-link px-3 py-1 rounded-md hover:bg-pink-100">Special Note ✨</a></li>
+        <li><a href="#" data-page="video" class="nav-link px-3 py-1 rounded-md hover:bg-pink-100">🎬 Video</a></li>
+        <li><a href="#" data-page="playlist" class="nav-link px-3 py-1 rounded-md hover:bg-pink-100">🎶 Playlist</a></li>
+        <li><a href="#" data-page="cake" class="nav-link px-3 py-1 rounded-md hover:bg-pink-100">🎂 Cake</a></li>
+        <li><a href="#" data-page="note" class="nav-link px-3 py-1 rounded-md hover:bg-pink-100">✨ Special Note</a></li>
       </ul>
     </div>
+
+    <ul id="navbarMenu"
+        class="hidden flex-col gap-2 text-sm bg-[#fff6fa] mt-2 mx-4 p-4 rounded-lg shadow-md lg:hidden">
+      <li><a href="#" data-page="intro" class="block nav-link py-2 px-3 rounded-md bg-pink-200 text-pink-700">Start</a></li>
+      <li><a href="#" data-page="home" class="block nav-link py-2 px-3 rounded-md hover:bg-pink-100">Home</a></li>
+      <li><a href="#" data-page="about" class="block nav-link py-2 px-3 rounded-md hover:bg-pink-100">About Lala</a></li>
+      <li><a href="#" data-page="memories" class="block nav-link py-2 px-3 rounded-md hover:bg-pink-100">Memories</a></li>
+      <li><a href="#" data-page="video" class="block nav-link py-2 px-3 rounded-md hover:bg-pink-100">🎬 Video</a></li>
+      <li><a href="#" data-page="playlist" class="block nav-link py-2 px-3 rounded-md hover:bg-pink-100">🎶 Playlist</a></li>
+      <li><a href="#" data-page="cake" class="block nav-link py-2 px-3 rounded-md hover:bg-pink-100">🎂 Cake</a></li>
+      <li><a href="#" data-page="note" class="block nav-link py-2 px-3 rounded-md hover:bg-pink-100">✨ Special Note</a></li>
+    </ul>
   </nav>
 
   <div id="petal-container" class="pointer-events-none fixed inset-0 z-40"></div>
@@ -51,5 +69,16 @@
   </main>
 
   <script src="js/script.js"></script>
+    <script>
+    const toggle = document.getElementById("menuToggle");
+    const menu = document.getElementById("navbarMenu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+
+
+
 </body>
 </html>

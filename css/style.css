@@ -55,3 +55,9 @@
   word-break: break-word;
   line-height: 1.7;
 }
+@media (max-width: 1024px) {
+  #navbarMenu .nav-link {
+    border-bottom: 1px solid #ffd3e6;
+    width: 100%;
+  }
+}
