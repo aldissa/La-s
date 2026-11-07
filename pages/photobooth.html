@@ -1,0 +1,24 @@
+<section class="photobooth-page">
+  <h2 class="text-3xl font-dancing text-pink-600 text-center mb-2">Photobooth 📸</h2>
+  <p class="text-center text-pink-700 mb-6">Mangga dipilih framenya😊</p>
+
+  <div class="photobooth-layout">
+    <div class="photobooth-preview">
+      <canvas id="photoboothCanvas" aria-label="Pratinjau hasil photobooth"></canvas>
+      <p id="photoboothCountdown" class="photobooth-countdown" aria-live="polite"></p>
+    </div>
+
+    <div class="photobooth-controls">
+      <label for="photoboothFrame" class="font-semibold text-pink-700">Pilih frame</label>
+      <select id="photoboothFrame" class="photobooth-select">
+        <option value="1">Frame 1</option>
+        <option value="2">Frame 2</option>
+      </select>
+
+      <button id="startCamera" class="photobooth-button">kamera nyala on aktif</button>
+      <button id="takePhotos" class="photobooth-button" disabled>Cekrek 📸</button>
+      <a id="downloadPhoto" class="photobooth-button photobooth-download" hidden>Gasss simpan</a>
+      <p id="photoboothStatus" class="photobooth-status" aria-live="polite">.</p>
+    </div>
+  </div>
+</section>
